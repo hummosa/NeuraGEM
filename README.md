@@ -111,7 +111,7 @@ If you build on this codebase, please cite the accompanying manuscript:
   title={A neural architecture for rapid learning of latent task states},
   author={Hummos, Ali and Wang, Mien Brabeeba and Lu, Qihong and Norman, Kenneth A. and Jazayeri, Mehrdad},
   year={2026},
-  note={Preprint}
+  note={bioRxiv}
 }
 ```
 

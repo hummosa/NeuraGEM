@@ -160,7 +160,9 @@ def run_generalized_tests(model, config, test_type='ood_means', weights_frozen=F
             training_data_means_saved = config.training_data_means
             config.training_data_means = [0.505, value] # 0.505 ends up being the pad_mean to give the models some data initially. Chosen to be a neutral middle value. the 0.005 is to differentiate it from the tested value 0.5
             if True: # not sure if these are bugs, I want to try this way
-                config.training_data_means = [ value] 
+                config.training_data_means = [ value] # Because I choose a pad mean that is not in the training data means,
+                # but more importantly, I want a switch to be included as the model adapts to the new mean 'value'
+                # so it is important to have value in training_data_means so they are excluded below.
 
         elif test_type == 'ood_stds':
             config.default_std = value
@@ -180,7 +182,7 @@ def run_generalized_tests(model, config, test_type='ood_means', weights_frozen=F
 
         dataset = TaskDataset(no_of_blocks=no_of_blocks, config=config)
 
-        if test_type in ['ood_means', 'block_size', 'ood_stds']: # this pads sequence just to get metarnns started with some data. The initial seq_len long data gets discarded otherwise and never logged.
+        if test_type in ['ood_means', 'block_size', 'ood_stds']: # this pads sequence just to get RNNs^long started with some data. The initial seq_len long data gets discarded otherwise and never logged.
             pad_length = config.seq_len + config.pre_window
             # pad_mean = 0.505
             first_mean = dataset.latent_sequence[0]
