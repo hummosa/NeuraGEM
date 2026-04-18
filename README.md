@@ -5,7 +5,12 @@ NeuraGEM (Neural Gradient-based Expectation-Maximization) is a computational fra
 
 ## Quick Start
 
-The easiest way to see something happening and run code is:
+The fastest way to run the different models:
+
+Install requirements
+'''
+pip install matplotlib tqdm seaborn pandas scikit-learn statsmodels
+'''
 
 ```bash
 python run_training_behavior.py
