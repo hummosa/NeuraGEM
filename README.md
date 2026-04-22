@@ -9,7 +9,7 @@ The model can run on any standard computer with RAM. No GPU is required, but is 
 
 ## Quick Start
 
-The fastest way to run the different models (simulation takes 1-2 minutes to run:
+The fastest way to run the different models:
 
 Clone this repository:
 ```bash
@@ -43,7 +43,7 @@ In `run_example.py` you can:
 
 ## Code Organization
 
-Files were renamed so experiment scripts are grouped by prefix:
+Files were named so experiment scripts are grouped by prefix:
 
 - `seq_learn*`: human sequence learning task
 - `cst*`: contextual switching task
@@ -104,13 +104,6 @@ sh ./submit_adapt_job.sh 119 seq_learn
 Notes:
 
 - `<MAX_TASK_ID>` is the highest array index (the script submits `0..MAX_TASK_ID`).
-- The script currently supports:
-  - `generalization_tests` -> `cst_run_generalization.py`
-  - `input_z_sweeps` -> `adapt_run_array_input_z_sweeps.py`
-  - `seq_learn_supp` -> `seq_learn_supplementary_run.py`
-  - `seq_learn_interleaved_phase` -> `seq_learn_varying_interleaved_phase_run.py`
-  - `seq_learn` -> `seq_learn_run.py`
-  - `time_scales` -> `time_scales_nested_run.py`
 - The helper script is just a convenience wrapper. If you add/rename experiment files, update the mapping in `submit_adapt_job.sh`.
 - The script writes Slurm logs to `./slurm/`.
 

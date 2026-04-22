@@ -9,7 +9,7 @@ import copy
 
 from tqdm import tqdm
 from functions_and_utils import criterion_self_fullfilling_prophecy
-from datasets import CoinDataset_probe, CoinDataset_channel, TaskDataset
+from datasets import TaskDataset
 
 
 ##### for train_model #####

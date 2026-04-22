@@ -269,10 +269,13 @@ def plot_logger_panels(logger, config, panel_order, x2=None, dpi=100, subplot_he
             else:
                 phase_end = x2
             phase_midpoint = (phase_start + phase_end) / 2
+            # add newlines to the phase name based on the number of words, to avoid overlap
+            phase_name = '\n'.join(phase_name.split())
+            
             ax.axvline(phase_start, color='tab:green', linestyle='-', linewidth=3, alpha=0.7)
             y_factor = 1.05 if subplot_height == 4 else 1.8
             ax.text(phase_midpoint, ax.get_ylim()[1] * y_factor, phase_name, rotation=0, verticalalignment='top', color='tab:green',
-             fontsize=7, fontweight='bold', ha='center')
+             fontsize=6, fontweight='bold', ha='center')
     def plot_latent_2d(ax):
         plot_latent(ax, force_2d=True)
     def plot_latent_chunk_1(ax):
