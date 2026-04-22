@@ -7,11 +7,18 @@ NeuraGEM (Neural Gradient-based Expectation-Maximization) is a computational fra
 
 The fastest way to run the different models:
 
-Install requirements
-'''
-pip install matplotlib tqdm seaborn pandas scikit-learn statsmodels
-'''
+Clone this repository:
+```bash
+git clone https://github.com/hummosa/NeuraGEM.git
+cd NeuraGEM
+```
 
+Install requirements:
+
+```bash
+pip install matplotlib tqdm seaborn pandas scikit-learn statsmodels
+```
+Run simulations:
 ```bash
 python run_training_behavior.py
 ```
@@ -112,11 +119,14 @@ Code was refactored and organized as a last step using an LLM agent. Some minor 
 If you build on this codebase, please cite the accompanying manuscript:
 
 ```bibtex
-@article{hummos2026neuragem,
-  title={A neural architecture for rapid learning of latent task states},
-  author={Hummos, Ali and Wang, Mien Brabeeba and Lu, Qihong and Norman, Kenneth A. and Jazayeri, Mehrdad},
-  year={2026},
-  note={bioRxiv}
+@article{Hummos2026.03.31.715618,
+	author = {Hummos, Ali and Wang, Mien Brabeeba and Lu, Qihong and Norman, Kenneth A. and Jazayeri, Mehrdad},
+	title = {A neural mechanism for online discovery of latent contexts},
+	elocation-id = {2026.03.31.715618},
+	year = {2026},
+	doi = {10.64898/2026.03.31.715618},
+	URL = {https://www.biorxiv.org/content/early/2026/04/02/2026.03.31.715618},
+	journal = {bioRxiv}
 }
 ```
 
