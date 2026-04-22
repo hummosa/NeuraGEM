@@ -2,10 +2,14 @@
 
 NeuraGEM (Neural Gradient-based Expectation-Maximization) is a computational framework for learning latent task structure with fast latent updates and slower synaptic weight updates. This repository contains the simulation, analysis, and figure-generation code for the NeuraGEM paper.
 
+## System requirements
+
+The software was run using Python version 3.12. Pytorch version 2.3.1. Python packages and versions in requirements.txt.
+The model can run on any standard computer with RAM. No GPU is required, but is GPUs are supported. 
 
 ## Quick Start
 
-The fastest way to run the different models:
+The fastest way to run the different models (simulation takes 1-2 minutes to run:
 
 Clone this repository:
 ```bash
@@ -13,8 +17,8 @@ git clone https://github.com/hummosa/NeuraGEM.git
 cd NeuraGEM
 ```
 
-Install requirements:
-
+Install requirements (5 minutes to install):
+See instructions to install PyTorch on official website https://pytorch.org/. 
 ```bash
 pip install matplotlib tqdm seaborn pandas scikit-learn statsmodels
 ```
@@ -23,7 +27,7 @@ Run simulations:
 python run_training_behavior.py
 ```
 
-This runs several behavioral conditions (NeuraGEM and RNN baselines) and exports compact figures.
+This runs several behavioral conditions (NeuraGEM and RNN baselines) and exports compact figures seen in supp Fig 10 (10 minutes to run).
 
 For a flexible sandbox script, use:
 
